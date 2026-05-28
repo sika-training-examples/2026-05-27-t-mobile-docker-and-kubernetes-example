@@ -11,6 +11,13 @@ spec:
       labels:
         app: redis
     spec:
+      initContainers:
+        - name: sleep10
+          image: busybox
+          command:
+            - /bin/sh
+            - -c
+            - sleep 5
       containers:
         - name: redis
           image: redis:8

@@ -12,6 +12,22 @@ spec:
       labels:
         app: backend
     spec:
+      serviceAccountName: backend
+      initContainers:
+        - name: wait-1s
+          image: busybox
+          command:
+            - /bin/sh
+            - -c
+            - sleep 1
+        - name: wait-for-migrations
+          image: registry.k8s.io/kubectl:v1.36.0
+          command:
+            - kubectl
+            - wait
+            - --for=condition=complete
+            - --timeout=600s
+            - job/migrations
       containers:
         - name: backend
           image: ttl.sh/ondrejsika/counter/backend
