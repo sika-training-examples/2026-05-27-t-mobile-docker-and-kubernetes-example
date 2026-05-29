@@ -20,3 +20,4 @@
 *.local.txt
 *.local.md
 Makefile.local.mk
+*.tgz
