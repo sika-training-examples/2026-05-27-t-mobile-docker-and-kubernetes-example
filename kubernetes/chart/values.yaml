@@ -1,2 +1,6 @@
 # Required
 host:
+
+# Optional
+backendImage: ghcr.io/ondrejsika/counter
+frontendImage: ghcr.io/ondrejsika/counter-frontend-go

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ttl.sh/ondrejsika/counter/frontend
+          image: {{ .Values.frontendImage }}
           env:
             - name: API_ORIGIN
               value: http://backend

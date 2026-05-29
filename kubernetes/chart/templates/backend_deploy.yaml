@@ -30,7 +30,7 @@ spec:
             - job/migrations
       containers:
         - name: backend
-          image: ttl.sh/ondrejsika/counter/backend
+          image: {{ .Values.backendImage }}
           env:
             - name: REDIS
               value: redis
