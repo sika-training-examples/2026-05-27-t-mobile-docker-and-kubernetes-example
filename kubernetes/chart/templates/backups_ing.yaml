@@ -8,10 +8,10 @@ spec:
   ingressClassName: haproxy
   tls:
     - hosts:
-        - ondrejsika.wo0.sikademo.com
-      secretName: ondrejsika.wo0.sikademo.com-tls
+        - {{ .Values.host }}
+      secretName: {{ .Values.host }}-tls
   rules:
-    - host: ondrejsika.wo0.sikademo.com
+    - host: {{ .Values.host }}
       http:
         paths:
           - path: /backups
