@@ -4,3 +4,5 @@ host:
 # Optional
 backendImage: ghcr.io/ondrejsika/counter
 frontendImage: ghcr.io/ondrejsika/counter-frontend-go
+
+EXTRA_TEXT_SUFFIX:
