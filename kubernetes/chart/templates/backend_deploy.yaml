@@ -29,7 +29,7 @@ spec:
             - wait
             - --for=condition=complete
             - --timeout=600s
-            - job/migrations
+            - job/migrations-{{.Release.Revison}}
       containers:
         - name: backend
           image: {{ .Values.backendImage }}
