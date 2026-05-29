@@ -24,7 +24,7 @@ spec:
           command:
             - /bin/sh
             - -c
-            - chmod 755 /usr/share/nginx/html/backups && chmod 644 -R /usr/share/nginx/html/backups
+            - chmod -R 755 /usr/share/nginx/html/backups
           volumeMounts:
             - name: backups
               mountPath: /usr/share/nginx/html/backups
